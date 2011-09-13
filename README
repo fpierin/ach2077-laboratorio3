@@ -1,0 +1,20 @@
+Autor: Felipe Lombardi Pierin
+
+Implementação de um exemplo, acesso a um banco de dados PostGree a partir de um DAO genérico e visualização em jsp
+
+Linguagens de programação: 
+- Java JSE 1.6
+
+IDE de programação
+- Eclipse
+
+Banco de dados
+- Modelo Relacional
+- PostGreSQL 9
+
+Conceitos:
+- JDBC
+- Pattern DAO
+- Generic DAO
+- Java Server Pages (jsp)
+
