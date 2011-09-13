@@ -18,3 +18,8 @@ Conceitos:
 - Generic DAO
 - Java Server Pages (jsp)
 
+Resultados esperados:
+- Adicione novos pontos geográficos e envie uma resposta via web;
+- Liste os pontos geográficos na web;
+- Remove pontos geográficos;
+
