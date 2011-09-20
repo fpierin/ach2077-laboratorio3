@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.usp.each.ach2077.laboratorio3.representacoes.PontoGeografico;
+import br.usp.each.ach2077.laboratorio3.utils.ConnectionFactory;
 
 public class PontoGeograficoDAO {
 
@@ -22,18 +23,18 @@ public class PontoGeograficoDAO {
 	
 	private final Connection connection;
 
-	public PontoGeograficoDAO(final Connection connection) {
-		this.connection = connection;
+	public PontoGeograficoDAO() {
+		this.connection = new ConnectionFactory().getConnection();
 	}
 	
-	public List<PontoGeografico> lista(){
+	public List<PontoGeografico> getLista(){
 		try{
 			List<PontoGeografico> pontosGeograficos = null;
 			pontosGeograficos = new ArrayList<PontoGeografico>();
-			PreparedStatement preparedStatement = this.connection.prepareStatement(SQL_LISTA_PONTOS_GEOGRAFICOS);
-			ResultSet resultSet = preparedStatement.executeQuery();
+			final PreparedStatement preparedStatement = this.connection.prepareStatement(SQL_LISTA_PONTOS_GEOGRAFICOS);
+			final ResultSet resultSet = preparedStatement.executeQuery();
 			while(resultSet.next()){
-				PontoGeografico pontoGeografico = new PontoGeografico();
+				final PontoGeografico pontoGeografico = new PontoGeografico();
 				pontoGeografico.setGraus(resultSet.getInt("graus"));
 				pontoGeografico.setId(resultSet.getInt("IdPonto"));
 				pontoGeografico.setMinutos(resultSet.getInt("minutos"));
@@ -44,7 +45,7 @@ public class PontoGeograficoDAO {
 			resultSet.close();
 			preparedStatement.close();
 			return pontosGeograficos;
-		} catch (Exception e) {
+		} catch (final Exception e) {
 			throw new RuntimeException(e);
 		}	
 	}

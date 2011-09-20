@@ -1,8 +1,9 @@
 Autor: Felipe Lombardi Pierin
+Blog: http://oreboladodeturing.wordpress.com
 
-Implementação de um exemplo, acesso a um banco de dados PostGree a partir de um DAO genérico e visualização em jsp
+Implementação de um exemplo de arquitetura MVC com acesso a banco de dados PostGre e manipulação de jsp.
 
-Linguagens de programação: 
+Linguagem de programação: 
 - Java JSE 1.6
 
 IDE de programação
@@ -13,12 +14,15 @@ Banco de dados
 - PostGreSQL 9
 
 Conceitos:
+- Model View Controller
 - JDBC
 - Pattern DAO
 - Java Server Pages (jsp)
+- Servlets
+- Scriptlets
 
 Resultados esperados:
-- Adicione novos pontos geográficos e envie uma resposta via web;
-- Liste os pontos geográficos na web;
-- Remove pontos geográficos;
+- Adicionar novos pontos geográficos e enviar respostas pela web;
+- Listar os pontos geográficos na web;
+- Remover pontos geográficos;
 
